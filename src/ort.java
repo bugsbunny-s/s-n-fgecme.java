@@ -21,17 +21,18 @@ public class ort {
 
         double avarage = (mat + turkce + kimya + fizik + muzik) / 5;
 
-        if(mat > 100 || turkce > 100 || kimya > 100 || fizik > 100 || muzik > 100) {
-        System.out.println("Notunuz 100 ü geçmemelidir. Tekrar deneyiniz.");
-        }
-
-        else if (avarage <= 55){
-            System.out.println("Sınıfta Kaldınız.");
-            System.out.println("Ortalamanız : " + avarage);
-        }
-        else {
-            System.out.println("Tebrikler!! Sınıfı Geçtiniz.");
-            System.out.println("Ortalamanız : " + avarage);
-        }
-     }
+        if((mat >= 0 && mat <= 100) && (turkce >= 0 && turkce <= 100) && (kimya >= 0 && kimya <= 100) && (fizik >= 0 && fizik <= 100) && (muzik >= 0 && muzik <=100)){   
+            
+            if (avarage <= 55){
+                System.out.println("Sınıfta Kaldınız.");
+               }
+            else {
+                System.out.println("Tebrikler!! Sınıfı Geçtiniz.");
+                }
+                System.out.println("Ortalamanız : " + avarage);
+    }
+    else{
+        System.out.println("Notlarınız 0 ila 100 arasında olmalıdır.");
+    }
+}
 }
